@@ -1,8 +1,19 @@
 <template>
-    <div>
+    <div class="main-cont">
+        <SideNav />
         <Nuxt />
     </div>
 </template>
+
+<script>
+import SideNav from '~/components/SideNav'
+
+export default {
+    components: {
+        SideNav,
+    },
+}
+</script>
 
 <style>
 html {
@@ -22,5 +33,8 @@ html {
 *::after {
     box-sizing: border-box;
     margin: 0;
+}
+.main-cont {
+    display: flex;
 }
 </style>
