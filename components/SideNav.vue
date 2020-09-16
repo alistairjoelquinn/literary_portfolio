@@ -1,14 +1,14 @@
 <template>
     <div class="nav-container">
         <div class="logo">😼</div>
-        <div v-for="item in navItems" :key="item.name" class="nav-item">
-            {{ item.name }}
-        </div>
+        <NavItem v-for="item in navItems" :key="item.name" :item="item" />
     </div>
 </template>
 
 <script>
 /* eslint-disable no-console */
+import NavItem from '~/components/NavItem'
+
 export default {
     data() {
         return {
@@ -16,35 +16,38 @@ export default {
                 {
                     name: 'Ethos',
                     route: '/ethos',
-                    color: 'blue',
+                    color: 'background-color:blue;',
                 },
                 {
                     name: 'Projects',
                     route: '/projects',
-                    color: 'white',
+                    color: 'background-color:purple;',
                 },
                 {
                     name: 'Portfolio',
                     route: '/portfolio',
-                    color: 'green',
+                    color: 'background-color:green;',
                 },
                 {
                     name: 'Testimonials',
                     route: '/testimonials',
-                    color: 'pink',
+                    color: 'background-color:red;',
                 },
                 {
                     name: 'Services',
                     route: '/services',
-                    color: 'orange',
+                    color: 'background-color:orange;',
                 },
                 {
                     name: 'Contact',
                     route: '/contact',
-                    color: 'dimgrey',
+                    color: 'background-color:dimgrey;',
                 },
             ],
         }
+    },
+    comonents: {
+        NavItem,
     },
     mounted() {
         console.log(this.navItems)
@@ -62,12 +65,5 @@ export default {
     width: 100%;
     font-size: 180px;
     text-align: center;
-}
-.nav-item {
-    text-align: center;
-    font-size: 35px;
-    transform: rotate(-30deg);
-    padding-bottom: 10px;
-    border-top: 1px solid black;
 }
 </style>
