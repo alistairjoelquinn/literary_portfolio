@@ -1,8 +1,12 @@
 <template>
     <div class="nav-container">
-        <div class="logo">😼</div>
+        <nuxt-link to="/">
+            <div class="logo">😼</div>
+        </nuxt-link>
         <div class="nav-items-container">
+            <div class="spacer"></div>
             <NavItem v-for="item in navItems" :key="item.name" :item="item" />
+            <div class="spacer"></div>
         </div>
     </div>
 </template>
@@ -59,18 +63,25 @@ export default {
     height: 100vh;
     width: 20vw;
     background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .logo {
     width: 100%;
-    font-size: 180px;
+    font-size: 140px;
     text-align: center;
 }
 .nav-items-container {
-    height: 60%;
-    transform: translateY(-30px);
+    height: 70%;
+    /* transform: translateY(-30px); */
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
+}
+.spacer {
+    height: 50px;
 }
 </style>
