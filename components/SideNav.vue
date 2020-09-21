@@ -1,7 +1,9 @@
 <template>
     <div class="nav-container">
         <div class="logo">😼</div>
-        <NavItem v-for="item in navItems" :key="item.name" :item="item" />
+        <div class="nav-items-container">
+            <NavItem v-for="item in navItems" :key="item.name" :item="item" />
+        </div>
     </div>
 </template>
 
@@ -49,9 +51,6 @@ export default {
     comonents: {
         NavItem,
     },
-    mounted() {
-        console.log(this.navItems)
-    },
 }
 </script>
 
@@ -65,5 +64,13 @@ export default {
     width: 100%;
     font-size: 180px;
     text-align: center;
+}
+.nav-items-container {
+    height: 60%;
+    transform: translateY(-30px);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
 }
 </style>
