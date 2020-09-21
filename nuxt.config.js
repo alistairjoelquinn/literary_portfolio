@@ -16,7 +16,7 @@ export default {
             },
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            { rel: 'icon', type: 'image/x-icon', href: '/catman.png' },
             {
                 rel: 'stylesheet',
                 href:
@@ -38,13 +38,5 @@ export default {
     },
     modules: ['@nuxtjs/axios'],
     axios: {},
-    build: {
-        // postcss: {
-        //     preset: {
-        //         features: {
-        //             customProperties: false,
-        //         },
-        //     },
-        // },
-    },
+    build: {},
 }

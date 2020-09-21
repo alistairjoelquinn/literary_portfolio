@@ -9,7 +9,7 @@
 <style lang="scss" scoped>
 .border-box {
     border: 1px solid black;
-    border-left: $fourth;
+    border-left: none;
     width: 100%;
 }
 .container {

@@ -76,6 +76,7 @@ export default {
     width: 100%;
     font-size: 140px;
     text-align: center;
+    background-color: transparent;
 }
 .nav-items-container {
     height: 70%;
