@@ -1,13 +1,20 @@
 <template>
-    <div class="container">
-        <h1>This is the PORTFOLIO page</h1>
+    <div class="border-box">
+        <div class="container">
+            <h1>This is the PORTFOLIO page</h1>
+        </div>
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+.border-box {
+    border: 1px solid black;
+    border-left: $third;
+    width: 100%;
+}
 .container {
-    margin: 0 auto;
-    min-height: 100vh;
+    border: 15px solid $third;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;

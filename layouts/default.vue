@@ -9,6 +9,7 @@
 import SideNav from '~/components/SideNav'
 
 export default {
+    /* eslint-disable no-console */
     components: {
         SideNav,
     },

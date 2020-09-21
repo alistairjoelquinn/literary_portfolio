@@ -4,9 +4,9 @@
             <div class="logo">😼</div>
         </nuxt-link>
         <div class="nav-items-container">
-            <div class="spacer"></div>
+            <div class="spacer-top"></div>
             <NavItem v-for="item in navItems" :key="item.name" :item="item" />
-            <div class="spacer"></div>
+            <div class="spacer-bottom"></div>
         </div>
     </div>
 </template>
@@ -22,38 +22,41 @@ export default {
                 {
                     name: 'Ethos',
                     route: '/sections/ethos',
-                    color: 'background-color:blue;',
+                    color: 'ethos',
                 },
                 {
                     name: 'Projects',
                     route: '/sections/projects',
-                    color: 'background-color:purple;',
+                    color: 'projects',
                 },
                 {
                     name: 'Portfolio',
                     route: '/sections/portfolio',
-                    color: 'background-color:green;',
+                    color: 'portfolio',
                 },
                 {
                     name: 'Testimonials',
                     route: '/sections/testimonials',
-                    color: 'background-color:red;',
+                    color: 'testimonials',
                 },
                 {
                     name: 'Services',
                     route: '/sections/services',
-                    color: 'background-color:orange;',
+                    color: 'services',
                 },
                 {
                     name: 'Contact',
                     route: '/sections/contact',
-                    color: 'background-color:dimgrey;',
+                    color: 'contact',
                 },
             ],
         }
     },
     comonents: {
         NavItem,
+    },
+    mounted() {
+        console.log('nav container is mounting')
     },
 }
 </script>
@@ -66,6 +69,8 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: 1px solid black;
+    border-right: none;
 }
 .logo {
     width: 100%;
@@ -74,14 +79,16 @@ export default {
 }
 .nav-items-container {
     height: 70%;
-    /* transform: translateY(-30px); */
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
 }
-.spacer {
+.spacer-bottom {
     height: 50px;
+}
+.spacer-top {
+    height: 80px;
 }
 </style>

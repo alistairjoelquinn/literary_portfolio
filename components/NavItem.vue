@@ -1,7 +1,7 @@
 <template>
     <nuxt-link :to="item.route">
         <div class="nav-box">
-            <div class="nav-item" :style="item.color">
+            <div :class="classes">
                 {{ item.name }}
             </div>
         </div>
@@ -9,6 +9,7 @@
 </template>
 
 <script>
+/* eslint-disable no-console */
 export default {
     props: {
         item: {
@@ -16,30 +17,57 @@ export default {
             type: Object,
         },
     },
+    data() {
+        return {
+            classes: ['nav-item', this.item.color],
+        }
+    },
+    mounted() {
+        console.log('component is mounting', this)
+    },
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .nav-box {
     min-width: 30vw;
-    height: 3.5rem;
-    border: 1px solid black;
+    height: 4rem;
     transform: rotate(-25deg);
     display: flex;
-    justify-content: center;
-    align-items: center;
     align-self: center;
+    border: 1px solid black;
     justify-self: center;
 }
 .nav-item {
     font-size: 1.5rem;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
     color: antiquewhite;
-    box-shadow: 0.05em -0.05em 0.05em black;
     transition: font-size ease-in-out 0.5s;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .nav-item:hover {
-    /* font-size: 3rem; */
+    -webkit-text-stroke: 0.5px white;
+}
+.ethos {
+    background-color: $first;
+}
+.projects {
+    background-color: $second;
+}
+.portfolio {
+    background-color: $third;
+}
+.testimonials {
+    background-color: $fourth;
+}
+.services {
+    background-color: $fifth;
+}
+.contact {
+    background-color: $sixth;
 }
 </style>
