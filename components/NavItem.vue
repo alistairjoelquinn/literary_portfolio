@@ -48,7 +48,6 @@ export default {
 .nav-item {
     font-size: 1.5rem;
     color: antiquewhite;
-    transition: font-size ease-in-out 0.5s;
     height: 100%;
     width: 100%;
     text-align: center;
@@ -58,9 +57,6 @@ export default {
 }
 .nav-item:hover {
     -webkit-text-stroke: 0.5px white;
-}
-.clicked {
-    border-top: 1px solid red;
 }
 .ethos {
     background-color: $first;

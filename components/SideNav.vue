@@ -1,7 +1,7 @@
 <template>
     <div class="nav-container">
         <nuxt-link to="/">
-            <div class="logo">😼</div>
+            <div class="logo" @click="homeClick">😼</div>
         </nuxt-link>
         <div class="nav-items-container">
             <div class="spacer-top"></div>
@@ -62,13 +62,12 @@ export default {
     comonents: {
         NavItem,
     },
-    mounted() {
-        console.log('nav container is mounting')
-    },
     methods: {
         clicked(item) {
             this.selectedItem = item
-            console.log('item: ', this.selectedItem)
+        },
+        homeClick() {
+            this.selectedItem = ''
         },
     },
 }
@@ -83,7 +82,6 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid black;
-    /* border-right: none; */
 }
 .logo {
     width: 100%;

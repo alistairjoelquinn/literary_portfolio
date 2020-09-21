@@ -20,7 +20,6 @@ export default {}
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-left: 1px solid black;
 }
 
 .title {
