@@ -1,8 +1,9 @@
 <template>
     <nuxt-link :to="item.route">
         <div class="nav-box">
-            <div :class="classes">
+            <div :class="item.classes" @click="colorBar">
                 {{ item.name }}
+                <div v-if="currentlyClicked">: ✅</div>
             </div>
         </div>
     </nuxt-link>
@@ -16,14 +17,20 @@ export default {
             required: true,
             type: Object,
         },
+        selectedItem: {
+            required: true,
+            type: String,
+        },
     },
-    data() {
-        return {
-            classes: ['nav-item', this.item.color],
-        }
+    computed: {
+        currentlyClicked() {
+            return this.item.classes[1] === this.selectedItem
+        },
     },
-    mounted() {
-        console.log('component is mounting', this)
+    methods: {
+        colorBar() {
+            this.$emit('somethingClicked', this.item.classes[1])
+        },
     },
 }
 </script>
@@ -51,6 +58,9 @@ export default {
 }
 .nav-item:hover {
     -webkit-text-stroke: 0.5px white;
+}
+.clicked {
+    border-top: 1px solid red;
 }
 .ethos {
     background-color: $first;

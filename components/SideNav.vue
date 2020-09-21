@@ -5,7 +5,13 @@
         </nuxt-link>
         <div class="nav-items-container">
             <div class="spacer-top"></div>
-            <NavItem v-for="item in navItems" :key="item.name" :item="item" />
+            <NavItem
+                v-for="item in navItems"
+                :key="item.name"
+                :item="item"
+                :selected-item="selectedItem"
+                @somethingClicked="clicked"
+            />
             <div class="spacer-bottom"></div>
         </div>
     </div>
@@ -18,36 +24,37 @@ import NavItem from '~/components/NavItem'
 export default {
     data() {
         return {
+            selectedItem: 'null',
             navItems: [
                 {
                     name: 'Ethos',
                     route: '/sections/ethos',
-                    color: 'ethos',
+                    classes: ['nav-item', 'ethos'],
                 },
                 {
                     name: 'Projects',
                     route: '/sections/projects',
-                    color: 'projects',
+                    classes: ['nav-item', 'projects'],
                 },
                 {
                     name: 'Portfolio',
                     route: '/sections/portfolio',
-                    color: 'portfolio',
+                    classes: ['nav-item', 'portfolio'],
                 },
                 {
                     name: 'Testimonials',
                     route: '/sections/testimonials',
-                    color: 'testimonials',
+                    classes: ['nav-item', 'testimonials'],
                 },
                 {
                     name: 'Services',
                     route: '/sections/services',
-                    color: 'services',
+                    classes: ['nav-item', 'services'],
                 },
                 {
                     name: 'Contact',
                     route: '/sections/contact',
-                    color: 'contact',
+                    classes: ['nav-item', 'contact'],
                 },
             ],
         }
@@ -57,6 +64,12 @@ export default {
     },
     mounted() {
         console.log('nav container is mounting')
+    },
+    methods: {
+        clicked(item) {
+            this.selectedItem = item
+            console.log('item: ', this.selectedItem)
+        },
     },
 }
 </script>
@@ -70,7 +83,7 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid black;
-    border-right: none;
+    /* border-right: none; */
 }
 .logo {
     width: 100%;
