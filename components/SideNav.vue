@@ -15,32 +15,32 @@ export default {
             navItems: [
                 {
                     name: 'Ethos',
-                    route: '/ethos',
+                    route: '/sections/ethos',
                     color: 'background-color:blue;',
                 },
                 {
                     name: 'Projects',
-                    route: '/projects',
+                    route: '/sections/projects',
                     color: 'background-color:purple;',
                 },
                 {
                     name: 'Portfolio',
-                    route: '/portfolio',
+                    route: '/sections/portfolio',
                     color: 'background-color:green;',
                 },
                 {
                     name: 'Testimonials',
-                    route: '/testimonials',
+                    route: '/sections/testimonials',
                     color: 'background-color:red;',
                 },
                 {
                     name: 'Services',
-                    route: '/services',
+                    route: '/sections/services',
                     color: 'background-color:orange;',
                 },
                 {
                     name: 'Contact',
-                    route: '/contact',
+                    route: '/sections/contact',
                     color: 'background-color:dimgrey;',
                 },
             ],

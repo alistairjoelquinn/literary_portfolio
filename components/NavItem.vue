@@ -1,7 +1,9 @@
 <template>
-    <div class="nav-item" :style="item.color">
-        {{ item.name }}
-    </div>
+    <nuxt-link :to="item.route">
+        <div class="nav-item" :style="item.color">
+            {{ item.name }}
+        </div>
+    </nuxt-link>
 </template>
 
 <script>
