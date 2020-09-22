@@ -5,6 +5,7 @@
                 {{ item.name }}
                 <div v-if="currentlyClicked" :class="boxClassItem"></div>
             </div>
+            <div class="right-border"></div>
         </div>
     </nuxt-link>
 </template>
@@ -104,5 +105,13 @@ export default {
 .blue {
     // background-color: blue;
     position: absolute;
+}
+.right-border {
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    right: 12.7%;
+    transform: rotate(25deg) translateY(-2.5px);
 }
 </style>
