@@ -89,7 +89,7 @@ export default {
     width: 20%;
     position: absolute;
     left: 22vw;
-    z-index: 4;
+    z-index: 1;
 }
 .right-border {
     background-color: black;

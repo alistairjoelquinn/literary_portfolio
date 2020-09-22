@@ -100,7 +100,6 @@ export default {
 <style scoped>
 .border-box {
     border: 1px solid black;
-    z-index: 2;
 }
 .nav-container {
     height: 100vh;
@@ -109,7 +108,6 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    z-index: 1;
 }
 .logo {
     width: 100%;
@@ -123,8 +121,6 @@ export default {
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    /* border-right: 1px solid black; */
-    /* overflow: hidden; */
 }
 .spacer-bottom {
     height: 50px;
