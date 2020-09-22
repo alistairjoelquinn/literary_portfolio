@@ -9,10 +9,9 @@
 <style lang="scss" scoped>
 .border-box {
     border: 1px solid black;
-    border-left: none;
     width: 100%;
-    z-index: 2;
-    background-color: white;
+    z-index: 1;
+    // background-color: white;
 }
 .container {
     border: 15px solid $first;
@@ -22,6 +21,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    z-index: 2;
 }
 h1 {
     font-size: 40px;

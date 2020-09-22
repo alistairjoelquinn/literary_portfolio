@@ -20,6 +20,8 @@ export default {}
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: white;
+    z-index: 3;
 }
 
 .title {

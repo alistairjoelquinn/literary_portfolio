@@ -1,9 +1,9 @@
 <template>
     <nuxt-link :to="item.route">
         <div class="nav-box">
-            <div :class="item.classes" @click="colorBar">
+            <div :class="item.classes" @click="colorBar(), moveToFront()">
                 {{ item.name }}
-                <div v-if="currentlyClicked" :class="selectedItem"></div>
+                <div v-if="currentlyClicked" class="red"></div>
             </div>
         </div>
     </nuxt-link>
@@ -31,6 +31,9 @@ export default {
         colorBar() {
             this.$emit('somethingClicked', this.item.classes[1])
         },
+        moveToFront() {
+            this.$emit('moveToFront')
+        },
     },
 }
 </script>
@@ -44,6 +47,8 @@ export default {
     align-self: center;
     border: 1px solid black;
     justify-self: center;
+    position: relative;
+    z-index: 2;
 }
 .nav-item {
     font-size: 1.5rem;
@@ -54,6 +59,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 .nav-item:hover {
     -webkit-text-stroke: 0.5px white;
@@ -82,5 +88,10 @@ export default {
 }
 .contact {
     background-color: $sixth;
+}
+.blue {
+    background-color: blue;
+    position: relative;
+    z-index: 4;
 }
 </style>

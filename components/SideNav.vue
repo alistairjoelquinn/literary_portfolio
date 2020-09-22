@@ -11,6 +11,7 @@
                 :item="item"
                 :selected-item="selectedItem"
                 @somethingClicked="clicked"
+                @moveToFront="moveToFront"
             />
             <div class="spacer-bottom"></div>
         </div>
@@ -68,6 +69,27 @@ export default {
         },
         homeClick() {
             this.selectedItem = ''
+            this.navItems.forEach((item) => {
+                if (item.classes.length > 2) {
+                    item.classes.pop()
+                }
+            })
+        },
+        moveToFront() {
+            this.navItems
+                .find(
+                    (item) => item.route.split('ions/')[1] === this.selectedItem
+                )
+                .classes.push('blue')
+            this.navItems
+                .filter(
+                    (item) => item.route.split('ions/')[1] !== this.selectedItem
+                )
+                .forEach((item) => {
+                    if (item.classes.length > 2) {
+                        item.classes.pop()
+                    }
+                })
         },
     },
 }
@@ -82,7 +104,8 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid black;
-    z-index: 1;
+    border-right: none;
+    z-index: 2;
 }
 .logo {
     width: 100%;
