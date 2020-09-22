@@ -39,4 +39,8 @@ export default {
     modules: ['@nuxtjs/axios'],
     axios: {},
     build: {},
+    transition: {
+        name: 'fade',
+        mode: 'out-in',
+    },
 }

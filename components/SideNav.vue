@@ -22,7 +22,7 @@
 
 <script>
 /* eslint-disable no-console */
-import NavItem from '~/components/NavItem'
+import NavItem from '~/components/NavItem';
 
 export default {
     data() {
@@ -60,41 +60,41 @@ export default {
                     classes: ['nav-item', 'contact'],
                 },
             ],
-        }
+        };
     },
     comonents: {
         NavItem,
     },
     methods: {
         clicked(item) {
-            this.selectedItem = item
+            this.selectedItem = item;
         },
         homeClick() {
-            this.selectedItem = ''
+            this.selectedItem = '';
             this.navItems.forEach((item) => {
                 if (item.classes.length > 2) {
-                    item.classes.pop()
+                    item.classes.pop();
                 }
-            })
+            });
         },
         moveToFront() {
             this.navItems
                 .find(
                     (item) => item.route.split('ions/')[1] === this.selectedItem
                 )
-                .classes.push('blue')
+                .classes.push('blue');
             this.navItems
                 .filter(
                     (item) => item.route.split('ions/')[1] !== this.selectedItem
                 )
                 .forEach((item) => {
                     if (item.classes.length > 2) {
-                        item.classes.pop()
+                        item.classes.pop();
                     }
-                })
+                });
         },
     },
-}
+};
 </script>
 
 <style scoped>

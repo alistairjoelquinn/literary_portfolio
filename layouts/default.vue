@@ -6,14 +6,14 @@
 </template>
 
 <script>
-import SideNav from '~/components/SideNav'
+import SideNav from '~/components/SideNav';
 
 export default {
     /* eslint-disable no-console */
     components: {
         SideNav,
     },
-}
+};
 </script>
 
 <style>

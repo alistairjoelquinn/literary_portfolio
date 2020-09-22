@@ -25,21 +25,21 @@ export default {
     },
     computed: {
         currentlyClicked() {
-            return this.item.classes[1] === this.selectedItem
+            return this.item.classes[1] === this.selectedItem;
         },
         boxClassItem() {
-            return ['colourSquare', this.item.classes[1]]
+            return ['colourSquare', this.item.classes[1]];
         },
     },
     methods: {
         colorBar() {
-            this.$emit('somethingClicked', this.item.classes[1])
+            this.$emit('somethingClicked', this.item.classes[1]);
         },
         moveToFront() {
-            this.$emit('moveToFront')
+            this.$emit('moveToFront');
         },
     },
-}
+};
 </script>
 
 <style lang="scss" scoped>
