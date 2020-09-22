@@ -1,6 +1,6 @@
 <template>
     <nuxt-link :to="item.route">
-        <div class="nav-box">
+        <div ref="singleNavItem" class="nav-box">
             <div :class="item.classes" @click="colorBar(), moveToFront()">
                 {{ item.name }}
                 <div v-if="currentlyClicked" :class="boxClassItem"></div>
@@ -29,6 +29,16 @@ export default {
         boxClassItem() {
             return ['colourSquare', this.item.classes[1]]
         },
+    },
+    mounted() {
+        console.log(
+            'distance from left: ',
+            this.$refs.singleNavItem.clientWidth
+        )
+        console.log(
+            'distance from top: ',
+            this.$refs.singleNavItem.getBoundingClientRect().top
+        )
     },
     methods: {
         colorBar() {
