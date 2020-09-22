@@ -4,7 +4,7 @@
         <div class="text-card">
             <h1 class="title is-1 header-text banner">Richard Catty</h1>
             <h3 class="subtitle is-5 header-text">
-                I only write about things I'm passionate about.
+                I only write about things which I'm passionate about.
             </h3>
         </div>
     </div>
