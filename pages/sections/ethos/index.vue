@@ -1,7 +1,9 @@
 <template>
     <div class="border-box">
         <div class="container">
-            <h1>This is the ETHOS page</h1>
+            <div class="inner-border">
+                <h1>This is the ETHOS page</h1>
+            </div>
         </div>
     </div>
 </template>
@@ -17,12 +19,17 @@
 .container {
     border: 15px solid $first;
     min-height: 100%;
+    z-index: 3;
+}
+.inner-border {
+    height: calc(100vh - 30px);
+    width: 100%;
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    z-index: 3;
 }
 h1 {
     font-size: 40px;

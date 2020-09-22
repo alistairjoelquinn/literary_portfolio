@@ -5,7 +5,7 @@
                 {{ item.name }}
                 <div v-if="currentlyClicked" :class="boxClassItem"></div>
             </div>
-            <div class="right-border"></div>
+            <div ref="borderItem" class="right-border"></div>
         </div>
     </nuxt-link>
 </template>
@@ -30,16 +30,6 @@ export default {
         boxClassItem() {
             return ['colourSquare', this.item.classes[1]]
         },
-    },
-    mounted() {
-        console.log(
-            'distance from left: ',
-            this.$refs.singleNavItem.clientWidth
-        )
-        console.log(
-            'distance from top: ',
-            this.$refs.singleNavItem.getBoundingClientRect().top
-        )
     },
     methods: {
         colorBar() {
@@ -95,16 +85,11 @@ export default {
     background-color: $sixth;
 }
 .colourSquare {
-    // background-color: red;
     height: 100%;
     width: 20%;
     position: absolute;
     left: 22vw;
     z-index: 4;
-}
-.blue {
-    // background-color: blue;
-    position: absolute;
 }
 .right-border {
     background-color: black;
