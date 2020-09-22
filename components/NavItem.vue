@@ -3,7 +3,7 @@
         <div class="nav-box">
             <div :class="item.classes" @click="colorBar(), moveToFront()">
                 {{ item.name }}
-                <div v-if="currentlyClicked" class="red"></div>
+                <div v-if="currentlyClicked" :class="boxClassItem"></div>
             </div>
         </div>
     </nuxt-link>
@@ -25,6 +25,9 @@ export default {
     computed: {
         currentlyClicked() {
             return this.item.classes[1] === this.selectedItem
+        },
+        boxClassItem() {
+            return ['colourSquare', this.item.classes[1]]
         },
     },
     methods: {
@@ -64,8 +67,7 @@ export default {
 .nav-item:hover {
     -webkit-text-stroke: 0.5px white;
 }
-.red {
-    background-color: red;
+.colourSquare {
     height: 100%;
     width: 20%;
     position: absolute;
@@ -90,8 +92,8 @@ export default {
     background-color: $sixth;
 }
 .blue {
-    background-color: blue;
-    position: relative;
+    // background-color: blue;
+    position: fixed;
     z-index: 4;
 }
 </style>
