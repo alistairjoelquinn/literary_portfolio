@@ -65,12 +65,6 @@ export default {
 .nav-item:hover {
     -webkit-text-stroke: 0.5px white;
 }
-.colourSquare {
-    height: 100%;
-    width: 20%;
-    position: absolute;
-    left: 22vw;
-}
 .ethos {
     background-color: $first;
 }
@@ -88,6 +82,14 @@ export default {
 }
 .contact {
     background-color: $sixth;
+}
+.colourSquare {
+    // background-color: red;
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    left: 22vw;
+    z-index: 4;
 }
 .blue {
     // background-color: blue;

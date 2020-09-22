@@ -1,19 +1,21 @@
 <template>
-    <div class="nav-container">
-        <nuxt-link to="/">
-            <div class="logo" @click="homeClick">😼</div>
-        </nuxt-link>
-        <div class="nav-items-container">
-            <div class="spacer-top"></div>
-            <NavItem
-                v-for="item in navItems"
-                :key="item.name"
-                :item="item"
-                :selected-item="selectedItem"
-                @somethingClicked="clicked"
-                @moveToFront="moveToFront"
-            />
-            <div class="spacer-bottom"></div>
+    <div class="border-box">
+        <div class="nav-container">
+            <nuxt-link to="/">
+                <div class="logo" @click="homeClick">😼</div>
+            </nuxt-link>
+            <div class="nav-items-container">
+                <div class="spacer-top"></div>
+                <NavItem
+                    v-for="item in navItems"
+                    :key="item.name"
+                    :item="item"
+                    :selected-item="selectedItem"
+                    @somethingClicked="clicked"
+                    @moveToFront="moveToFront"
+                />
+                <div class="spacer-bottom"></div>
+            </div>
         </div>
     </div>
 </template>
@@ -96,6 +98,10 @@ export default {
 </script>
 
 <style scoped>
+.border-box {
+    border: 1px solid black;
+    z-index: 2;
+}
 .nav-container {
     height: 100vh;
     width: 20vw;
@@ -103,8 +109,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid black;
-    /* border-right: none; */
+    z-index: 1;
 }
 .logo {
     width: 100%;
