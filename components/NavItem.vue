@@ -94,7 +94,7 @@ export default {
 .right-border {
     background-color: black;
     position: absolute;
-    height: 100%;
+    height: calc(100% / 0.99120281186);
     width: 1px;
     right: 12.7%;
     transform: rotate(25deg) translateY(-2.5px);
