@@ -11,7 +11,7 @@
     border: 1px solid black;
     border-left: none;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
     // background-color: white;
 }
 .container {
@@ -22,7 +22,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    z-index: 2;
+    z-index: 3;
 }
 h1 {
     font-size: 40px;

@@ -51,7 +51,6 @@ export default {
     border: 1px solid black;
     justify-self: center;
     position: relative;
-    z-index: 2;
 }
 .nav-item {
     font-size: 1.5rem;
@@ -62,7 +61,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
 }
 .nav-item:hover {
     -webkit-text-stroke: 0.5px white;
@@ -93,7 +91,6 @@ export default {
 }
 .blue {
     // background-color: blue;
-    position: fixed;
-    z-index: 4;
+    position: absolute;
 }
 </style>

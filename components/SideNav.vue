@@ -104,8 +104,7 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid black;
-    border-right: none;
-    z-index: 2;
+    /* border-right: none; */
 }
 .logo {
     width: 100%;
@@ -119,6 +118,8 @@ export default {
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
+    /* border-right: 1px solid black; */
+    /* overflow: hidden; */
 }
 .spacer-bottom {
     height: 50px;
