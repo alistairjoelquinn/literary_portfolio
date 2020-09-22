@@ -82,6 +82,7 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid black;
+    z-index: 1;
 }
 .logo {
     width: 100%;
@@ -95,7 +96,6 @@ export default {
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
 }
 .spacer-bottom {
     height: 50px;

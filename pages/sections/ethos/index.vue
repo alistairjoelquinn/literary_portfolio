@@ -11,6 +11,8 @@
     border: 1px solid black;
     border-left: none;
     width: 100%;
+    z-index: 2;
+    background-color: white;
 }
 .container {
     border: 15px solid $first;

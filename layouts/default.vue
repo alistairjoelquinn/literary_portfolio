@@ -38,5 +38,6 @@ html {
 }
 .main-cont {
     display: flex;
+    overflow: hidden;
 }
 </style>

@@ -3,7 +3,7 @@
         <div class="nav-box">
             <div :class="item.classes" @click="colorBar">
                 {{ item.name }}
-                <div v-if="currentlyClicked">: ✅</div>
+                <div v-if="currentlyClicked" :class="selectedItem"></div>
             </div>
         </div>
     </nuxt-link>
@@ -57,6 +57,13 @@ export default {
 }
 .nav-item:hover {
     -webkit-text-stroke: 0.5px white;
+}
+.red {
+    background-color: red;
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    left: 22vw;
 }
 .ethos {
     background-color: $first;
