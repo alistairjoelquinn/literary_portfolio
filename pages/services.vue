@@ -14,7 +14,7 @@
     border-left: none;
     width: 100%;
     z-index: 3;
-    // background-color: white;
+    background-color: white;
 }
 .container {
     border: 15px solid $fifth;
