@@ -12,7 +12,6 @@
                     :item="item"
                     :selected-item="selectedItem"
                     @somethingClicked="clicked"
-                    @moveToFront="moveToFront"
                 />
                 <div class="spacer-bottom"></div>
             </div>
@@ -27,16 +26,16 @@ import NavItem from '~/components/NavItem';
 export default {
     data() {
         return {
-            selectedItem: 'null',
+            selectedItem: 'ethos',
             navItems: [
                 {
                     name: 'Ethos',
-                    route: '/sections/ethos',
+                    route: '/',
                     classes: ['nav-item', 'ethos'],
                 },
                 {
                     name: 'Projects',
-                    route: '/sections/projects',
+                    route: 'projects',
                     classes: ['nav-item', 'projects'],
                 },
                 {
@@ -70,28 +69,7 @@ export default {
             this.selectedItem = item;
         },
         homeClick() {
-            this.selectedItem = '';
-            this.navItems.forEach((item) => {
-                if (item.classes.length > 2) {
-                    item.classes.pop();
-                }
-            });
-        },
-        moveToFront() {
-            this.navItems
-                .find(
-                    (item) => item.route.split('ions/')[1] === this.selectedItem
-                )
-                .classes.push('blue');
-            this.navItems
-                .filter(
-                    (item) => item.route.split('ions/')[1] !== this.selectedItem
-                )
-                .forEach((item) => {
-                    if (item.classes.length > 2) {
-                        item.classes.pop();
-                    }
-                });
+            this.selectedItem = 'ethos';
         },
     },
 };

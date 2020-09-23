@@ -1,7 +1,7 @@
 <template>
     <nuxt-link :to="item.route">
         <div ref="singleNavItem" class="nav-box">
-            <div :class="item.classes" @click="colorBar(), moveToFront()">
+            <div :class="item.classes" @click="colorBar">
                 {{ item.name }}
                 <div v-if="currentlyClicked" :class="boxClassItem"></div>
             </div>
@@ -34,9 +34,6 @@ export default {
     methods: {
         colorBar() {
             this.$emit('somethingClicked', this.item.classes[1]);
-        },
-        moveToFront() {
-            this.$emit('moveToFront');
         },
     },
 };

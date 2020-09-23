@@ -2,7 +2,7 @@
     <div class="border-box">
         <div class="container">
             <div class="inner-border">
-                <h1>This is the ETHOS page</h1>
+                <h1>This is the PROJECTS page</h1>
             </div>
         </div>
     </div>
@@ -17,7 +17,7 @@
     // background-color: white;
 }
 .container {
-    border: 15px solid $first;
+    border: 15px solid $second;
     min-height: 100%;
     z-index: 3;
 }
