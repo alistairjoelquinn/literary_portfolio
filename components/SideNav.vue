@@ -40,22 +40,22 @@ export default {
                 },
                 {
                     name: 'Portfolio',
-                    route: '/sections/portfolio',
+                    route: 'portfolio',
                     classes: ['nav-item', 'portfolio'],
                 },
                 {
                     name: 'Testimonials',
-                    route: '/sections/testimonials',
+                    route: 'testimonials',
                     classes: ['nav-item', 'testimonials'],
                 },
                 {
                     name: 'Services',
-                    route: '/sections/services',
+                    route: 'services',
                     classes: ['nav-item', 'services'],
                 },
                 {
                     name: 'Contact',
-                    route: '/sections/contact',
+                    route: 'contact',
                     classes: ['nav-item', 'contact'],
                 },
             ],
