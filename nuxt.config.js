@@ -40,8 +40,8 @@ export default {
     axios: {},
     build: {},
     env: {},
-    transition: {
-        name: 'fade',
-        mode: 'out-in',
-    },
-}
+    // transition: {
+    //     name: 'fade',
+    //     mode: 'out-in',
+    // },
+};
