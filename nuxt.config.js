@@ -29,7 +29,7 @@ export default {
             },
         ],
     },
-    css: [{ src: 'bulma/bulma.sass', lang: 'sass' }],
+    css: ['~assets/styles/main.css', { src: 'bulma/bulma.sass', lang: 'sass' }],
     plugins: [],
     components: true,
     buildModules: ['@nuxtjs/style-resources', '@nuxtjs/eslint-module'],
@@ -39,6 +39,7 @@ export default {
     modules: ['@nuxtjs/axios'],
     axios: {},
     build: {},
+    env: {},
     transition: {
         name: 'fade',
         mode: 'out-in',
