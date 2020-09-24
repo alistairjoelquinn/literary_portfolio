@@ -4,10 +4,10 @@
             <div class="inner-border">
                 <div class="testimonial-cont">
                     <section class="section">
-                        <CardImage image="~/static/testimonial1.jpg" />
+                        <CardImage image="/testimonial1.jpeg" />
                     </section>
                     <section class="section">
-                        <CardImage image="~/static/testimonial2.jpg" />
+                        <CardImage image="/testimonial2.jpeg" />
                     </section>
                 </div>
             </div>
@@ -40,6 +40,7 @@
 }
 .testimonial-cont {
     display: flex;
+    width: 80%;
 }
 h1 {
     font-size: 40px;

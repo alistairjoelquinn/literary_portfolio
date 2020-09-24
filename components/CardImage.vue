@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-image">
             <figure class="image is-4by3">
-                <img :src="image" alt="Testimonial 1" />
+                <img :src="image" alt="Testimonial 1" class="image-large" />
             </figure>
         </div>
         <div class="card-content">
@@ -31,11 +31,22 @@
 
 <script>
 export default {
+    /* eslint-disable no-console */
     props: {
         image: {
             type: String,
             required: true,
         },
     },
+    mounted() {
+        console.log('this: ', this);
+    },
 };
 </script>
+
+<style scoped>
+.image-large {
+    width: 20vw;
+    height: 300px;
+}
+</style>
