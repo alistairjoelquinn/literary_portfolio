@@ -3,11 +3,12 @@
         <div class="container">
             <div class="inner-border">
                 <div class="testimonial-cont">
-                    <section class="section">
-                        <CardImage :card-data="testimonial1" />
-                    </section>
-                    <section class="section">
-                        <CardImage :card-data="testimonial2" />
+                    <section
+                        v-for="data in userData"
+                        :key="data.content"
+                        class="section"
+                    >
+                        <CardImage :card-data="data" />
                     </section>
                 </div>
             </div>
@@ -19,21 +20,34 @@
 export default {
     data() {
         return {
-            testimonial1: {
-                image: '/testimonial1.jpeg',
-                name: 'Amy Walker',
-                handle: '@amywalker',
-                content:
-                    'I read all of cattys books and think that he is the best writer ever. This one time i went to a party with him',
-                hashTags: ['cattyiscool', 'longlivepsychmusic'],
-            },
-            testimonial2: {
-                image: '/testimonial2.jpeg',
-                name: 'Eric Smith',
-                handle: '@ericsmith',
-                content:
-                    'Catty loves trees more than anyone I know. He loves them even more than he loves marmite which is basically illegal if you grow up in the UK',
-                hashTags: ['yolo', 'h8rsgonh8'],
+            userData: {
+                testimonial1: {
+                    image: '/testimonial1.jpeg',
+                    name: 'Amy Walker',
+                    handle: '@amywalker',
+                    content:
+                        'I read all of cattys books and think that he is the best writer ever. This one time i went to a party with him',
+                    hashTags: ['cattyiscool', 'longlivepsychmusic'],
+                    time: '11:09 PM - 1 Jan 2020',
+                },
+                testimonial2: {
+                    image: '/testimonial2.jpeg',
+                    name: 'Eric Smith',
+                    handle: '@ericsmith',
+                    content:
+                        'Catty loves trees more than anyone I know. He loves them even more than he loves marmite which is basically illegal in the UK',
+                    hashTags: ['yolo', 'h8rsgonh8'],
+                    time: '10:30 AM - 3 May 2020',
+                },
+                testimonial3: {
+                    image: '/testimonial3.jpeg',
+                    name: 'Anna Lee',
+                    handle: '@annalee',
+                    content:
+                        'The deepest thinker of his time. I cant wait for his next book about the world we live in',
+                    hashTags: ['stalkystalk', 'catty4life'],
+                    time: '06:00 AM - 4 Jul 2020',
+                },
             },
         };
     },
