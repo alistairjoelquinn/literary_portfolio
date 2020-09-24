@@ -2,7 +2,21 @@
     <div class="border-box">
         <div class="container">
             <div class="inner-border">
-                <h1>This is the PORTFOLIO page</h1>
+                <h1>Portfolio</h1>
+                <section class="card-container">
+                    <section class="section">
+                        <CardMediaShare />
+                        <CardMediaShare />
+                    </section>
+                    <section class="section">
+                        <CardMediaShare />
+                        <CardMediaShare />
+                    </section>
+                    <section class="section">
+                        <CardMediaShare />
+                        <CardMediaShare />
+                    </section>
+                </section>
             </div>
         </div>
     </div>
@@ -14,7 +28,7 @@
     border-left: none;
     width: 100%;
     z-index: 3;
-    background-color: white;
+    background-color: antiquewhite;
 }
 .container {
     border: 15px solid $third;
@@ -30,6 +44,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+.card-container {
+    display: flex;
 }
 h1 {
     font-size: 40px;
