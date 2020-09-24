@@ -9,12 +9,12 @@
         <footer class="card-footer">
             <a href="#" class="card-footer-item">Request Service</a>
             <div class="card-footer-item">
-                <a href="#" class="button thumb-down">
+                <a href="#" class="button twitter">
                     <i class="fa fa-twitter"></i>
                 </a>
             </div>
             <div class="card-footer-item">
-                <a href="#" class="button share">
+                <a href="#" class="button facebook">
                     <i class="fa fa-facebook"></i>
                 </a>
             </div>
@@ -34,4 +34,12 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.twitter {
+    background-color: $first;
+}
+.facebook {
+    background-color: $sixth;
+    color: antiquewhite;
+}
+</style>

@@ -2,11 +2,13 @@
     <div class="border-box">
         <div class="container">
             <div class="inner-border">
-                <CardServices
-                    v-for="service in services"
-                    :key="service.title"
-                    :service-data="service"
-                />
+                <div class="card-cont">
+                    <CardServices
+                        v-for="service in services"
+                        :key="service.title"
+                        :service-data="service"
+                    />
+                </div>
             </div>
         </div>
     </div>
@@ -45,10 +47,15 @@ export default {
     width: 100%;
     border: 1px solid black;
     display: flex;
+    justify-content: center;
+}
+.card-cont {
+    height: 100%;
+    width: 80%;
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    text-align: center;
 }
 h1 {
     font-size: 40px;

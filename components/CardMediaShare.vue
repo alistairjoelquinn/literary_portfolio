@@ -13,12 +13,12 @@
                     </a>
                 </div>
                 <div class="card-footer-item">
-                    <a href="#" class="button thumb-down">
+                    <a href="#" class="button twitter">
                         <i class="fa fa-twitter"></i>
                     </a>
                 </div>
                 <div class="card-footer-item">
-                    <a href="#" class="button share">
+                    <a href="#" class="button facebook">
                         <i class="fa fa-facebook"></i>
                     </a>
                 </div>
@@ -37,10 +37,10 @@ export default {
 .thumb-up {
     background-color: $third;
 }
-.thumb-down {
+.twitter {
     background-color: $first;
 }
-.share {
+.facebook {
     background-color: $sixth;
     color: antiquewhite;
 }
