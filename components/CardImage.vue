@@ -1,27 +1,33 @@
 <template>
-    <div class="card">
+    <div class="card cont">
         <div class="card-image">
             <figure class="image is-4by3">
-                <img :src="image" alt="Testimonial 1" class="image-large" />
+                <img
+                    :src="cardData.image"
+                    alt="Testimonial 1"
+                    class="image-large"
+                />
             </figure>
         </div>
         <div class="card-content">
             <div class="media">
                 <div class="media-left">
                     <figure class="image is-48x48">
-                        <img :src="image" alt="Testimonial 2" />
+                        <img :src="cardData.image" alt="Testimonial 2" />
                     </figure>
                 </div>
                 <div class="media-content">
-                    <p class="title is-4">Amy Walker</p>
-                    <p class="subtitle is-6">@amywalker</p>
+                    <p class="title is-4">{{ cardData.name }}</p>
+                    <p class="subtitle is-6">{{ cardData.handle }}</p>
                 </div>
             </div>
 
             <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris. <a>@amywalker</a>.
-                <a href="#">#css</a> <a href="#">#responsive</a>
+                {{ cardData.content }}
+                <a> {{ cardData.handle }} </a>
+                <a v-for="tag in cardData.hashTags" :key="tag" href="#">
+                    #{{ tag }}
+                </a>
                 <br />
                 <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
             </div>
@@ -33,8 +39,8 @@
 export default {
     /* eslint-disable no-console */
     props: {
-        image: {
-            type: String,
+        cardData: {
+            type: Object,
             required: true,
         },
     },
@@ -44,9 +50,15 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.cont {
+    max-width: 30vw;
+    height: 80vh;
+}
 .image-large {
-    width: 20vw;
-    height: 300px;
+    max-width: 30vw;
+    max-height: 40vh;
+    width: auto;
+    height: auto;
 }
 </style>
