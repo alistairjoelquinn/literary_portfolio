@@ -1,27 +1,23 @@
 <template>
     <div class="card">
         <header class="card-header">
-            <p class="card-header-title">Component</p>
-            <a href="#" class="card-header-icon" aria-label="more options">
-                <span class="icon">
-                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-            </a>
+            <p class="card-header-title">{{ serviceData.title }}</p>
         </header>
         <div class="card-content">
-            <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.
-                <a href="#">@bulmaio</a>. <a href="#">#css</a>
-                <a href="#">#responsive</a>
-                <br />
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-            </div>
+            <div class="content">{{ serviceData.content }}</div>
         </div>
         <footer class="card-footer">
-            <a href="#" class="card-footer-item">Save</a>
-            <a href="#" class="card-footer-item">Edit</a>
-            <a href="#" class="card-footer-item">Delete</a>
+            <a href="#" class="card-footer-item">Request Service</a>
+            <div class="card-footer-item">
+                <a href="#" class="button thumb-down">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </div>
+            <div class="card-footer-item">
+                <a href="#" class="button share">
+                    <i class="fa fa-facebook"></i>
+                </a>
+            </div>
         </footer>
     </div>
 </template>
@@ -29,6 +25,12 @@
 <script>
 export default {
     name: 'CardServices',
+    props: {
+        serviceData: {
+            type: Array,
+            required: true,
+        },
+    },
 };
 </script>
 

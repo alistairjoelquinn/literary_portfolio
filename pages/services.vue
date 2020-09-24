@@ -2,13 +2,30 @@
     <div class="border-box">
         <div class="container">
             <div class="inner-border">
-                <CardServices />
-                <CardServices />
-                <CardServices />
+                <CardServices
+                    v-for="service in services"
+                    :key="service.title"
+                    :service-data="service"
+                />
             </div>
         </div>
     </div>
 </template>
+
+<script>
+import services from '~/assets/json-data/servicesData';
+
+export default {
+    data() {
+        return {
+            services: [],
+        };
+    },
+    mounted() {
+        this.services = services;
+    },
+};
+</script>
 
 <style lang="scss" scoped>
 .border-box {
