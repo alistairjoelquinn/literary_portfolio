@@ -30,7 +30,7 @@ export default {
         ],
     },
     css: ['~assets/styles/main.css', { src: 'bulma/bulma.sass', lang: 'sass' }],
-    plugins: [],
+    plugins: ['~plugins/core-components.js'],
     components: true,
     buildModules: ['@nuxtjs/style-resources', '@nuxtjs/eslint-module'],
     styleResources: {

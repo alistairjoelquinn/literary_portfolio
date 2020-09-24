@@ -5,7 +5,7 @@
                 {{ item.name }}
                 <div v-if="currentlyClicked" :class="boxClassItem"></div>
             </div>
-            <div ref="borderItem" class="right-border"></div>
+            <div class="right-border"></div>
         </div>
     </nuxt-link>
 </template>
