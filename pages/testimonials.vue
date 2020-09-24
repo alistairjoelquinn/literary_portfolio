@@ -24,7 +24,7 @@ export default {
                 name: 'Amy Walker',
                 handle: '@amywalker',
                 content:
-                    'I read all of cattys books and think that he is the best writer ever. This one time i went to a party with him and he was the best dancer there',
+                    'I read all of cattys books and think that he is the best writer ever. This one time i went to a party with him',
                 hashTags: ['cattyiscool', 'longlivepsychmusic'],
             },
             testimonial2: {
@@ -46,7 +46,7 @@ export default {
     border-left: none;
     width: 100%;
     z-index: 3;
-    background-color: white;
+    background-color: antiquewhite;
 }
 .container {
     border: 15px solid $fourth;

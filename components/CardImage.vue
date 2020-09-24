@@ -1,7 +1,7 @@
 <template>
     <div class="card cont">
         <div class="card-image">
-            <figure class="image is-4by3">
+            <figure class="image is-3by3">
                 <img
                     :src="cardData.image"
                     alt="Testimonial 1"
@@ -24,6 +24,7 @@
 
             <div class="content">
                 {{ cardData.content }}
+                <br />
                 <a> {{ cardData.handle }} </a>
                 <a v-for="tag in cardData.hashTags" :key="tag" href="#">
                     #{{ tag }}
@@ -52,13 +53,11 @@ export default {
 
 <style lang="scss" scoped>
 .cont {
-    max-width: 30vw;
+    max-width: 20vw;
     height: 80vh;
 }
 .image-large {
-    max-width: 30vw;
-    max-height: 40vh;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: calc(width);
 }
 </style>
