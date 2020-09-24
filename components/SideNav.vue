@@ -22,47 +22,20 @@
 <script>
 /* eslint-disable no-console */
 import NavItem from '~/components/NavItem';
+import navItems from '~/assets/json-data/navItems';
 
 export default {
+    components: {
+        NavItem,
+    },
     data() {
         return {
             selectedItem: 'ethos',
-            navItems: [
-                {
-                    name: 'Ethos',
-                    route: '/',
-                    classes: ['nav-item', 'ethos'],
-                },
-                {
-                    name: 'Projects',
-                    route: 'projects',
-                    classes: ['nav-item', 'projects'],
-                },
-                {
-                    name: 'Portfolio',
-                    route: 'portfolio',
-                    classes: ['nav-item', 'portfolio'],
-                },
-                {
-                    name: 'Testimonials',
-                    route: 'testimonials',
-                    classes: ['nav-item', 'testimonials'],
-                },
-                {
-                    name: 'Services',
-                    route: 'services',
-                    classes: ['nav-item', 'services'],
-                },
-                {
-                    name: 'Contact',
-                    route: 'contact',
-                    classes: ['nav-item', 'contact'],
-                },
-            ],
+            navItems: [],
         };
     },
-    comonents: {
-        NavItem,
+    mounted() {
+        this.navItems = navItems;
     },
     methods: {
         clicked(item) {

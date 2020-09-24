@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Ethos",
+        "route": "/",
+        "classes": ["nav-item", "ethos"]
+    },
+    {
+        "name": "Projects",
+        "route": "projects",
+        "classes": ["nav-item", "projects"]
+    },
+    {
+        "name": "Portfolio",
+        "route": "portfolio",
+        "classes": ["nav-item", "portfolio"]
+    },
+    {
+        "name": "Testimonials",
+        "route": "testimonials",
+        "classes": ["nav-item", "testimonials"]
+    },
+    {
+        "name": "Services",
+        "route": "services",
+        "classes": ["nav-item", "services"]
+    },
+    {
+        "name": "Contact",
+        "route": "contact",
+        "classes": ["nav-item", "contact"]
+    }
+]
