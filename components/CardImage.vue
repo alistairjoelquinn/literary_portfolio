@@ -39,6 +39,7 @@
 <script>
 export default {
     /* eslint-disable no-console */
+    name: 'CardImage',
     props: {
         cardData: {
             type: Object,

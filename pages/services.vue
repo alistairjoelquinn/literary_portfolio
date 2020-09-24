@@ -2,7 +2,9 @@
     <div class="border-box">
         <div class="container">
             <div class="inner-border">
-                <h1>This is the SERVICES page</h1>
+                <CardServices />
+                <CardServices />
+                <CardServices />
             </div>
         </div>
     </div>
@@ -14,7 +16,7 @@
     border-left: none;
     width: 100%;
     z-index: 3;
-    background-color: white;
+    background-color: antiquewhite;
 }
 .container {
     border: 15px solid $fifth;
@@ -27,7 +29,7 @@
     border: 1px solid black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
 }
