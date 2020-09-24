@@ -2,14 +2,14 @@
     <div class="card">
         <div class="card-image">
             <figure class="image is-4by3">
-                <img src="" alt="Testimonial 1" />
+                <img :src="image" alt="Testimonial 1" />
             </figure>
         </div>
         <div class="card-content">
             <div class="media">
                 <div class="media-left">
                     <figure class="image is-48x48">
-                        <img src="" alt="Testimonial 2" />
+                        <img :src="image" alt="Testimonial 2" />
                     </figure>
                 </div>
                 <div class="media-content">
@@ -28,3 +28,14 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    props: {
+        image: {
+            type: String,
+            required: true,
+        },
+    },
+};
+</script>

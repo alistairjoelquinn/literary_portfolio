@@ -2,7 +2,14 @@
     <div class="border-box">
         <div class="container">
             <div class="inner-border">
-                <h1>This is the TESTIMONIALS page</h1>
+                <div class="testimonial-cont">
+                    <section class="section">
+                        <CardImage image="~/static/testimonial1.jpg" />
+                    </section>
+                    <section class="section">
+                        <CardImage image="~/static/testimonial2.jpg" />
+                    </section>
+                </div>
             </div>
         </div>
     </div>
@@ -30,6 +37,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+.testimonial-cont {
+    display: flex;
 }
 h1 {
     font-size: 40px;

@@ -28,7 +28,7 @@
     border-left: none;
     width: 100%;
     z-index: 3;
-    background-color: $first;
+    background-color: antiquewhite;
 }
 .container {
     border: 15px solid $second;
@@ -51,6 +51,5 @@
 h1 {
     font-size: 40px;
     color: black;
-    // -webkit-text-stroke: 0.2px black;
 }
 </style>
