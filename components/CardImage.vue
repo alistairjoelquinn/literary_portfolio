@@ -59,6 +59,5 @@ export default {
 }
 .image-large {
     width: 100%;
-    height: calc(width);
 }
 </style>
