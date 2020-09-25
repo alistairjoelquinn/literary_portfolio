@@ -31,6 +31,9 @@ export default {
             return ['colourSquare', this.item.classes[1]];
         },
     },
+    mounted() {
+        console.log('HREF: ', window.location.href);
+    },
     methods: {
         colorBar() {
             this.$emit('somethingClicked', this.item.classes[1]);

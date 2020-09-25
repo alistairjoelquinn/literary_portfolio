@@ -27,7 +27,7 @@ export default {
     name: 'CardServices',
     props: {
         serviceData: {
-            type: Array,
+            type: Object,
             required: true,
         },
     },
