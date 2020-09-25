@@ -9,28 +9,21 @@
                             <input
                                 class="input"
                                 type="text"
-                                placeholder="Text input"
+                                placeholder="Full Name"
                             />
                         </div>
                     </div>
 
                     <div class="field">
                         <label class="label">Email</label>
-                        <div class="control has-icons-left has-icons-right">
+                        <div class="control">
                             <input
-                                class="input is-danger"
+                                class="input"
                                 type="email"
-                                placeholder="Email input"
-                                value="hello@"
+                                placeholder="Email Address"
+                                value=""
                             />
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-envelope"></i>
-                            </span>
-                            <span class="icon is-small is-right">
-                                <i class="fas fa-exclamation-triangle"></i>
-                            </span>
                         </div>
-                        <p class="help is-danger">This email is invalid</p>
                     </div>
 
                     <div class="field">
@@ -38,17 +31,19 @@
                         <div class="control">
                             <textarea
                                 class="textarea"
-                                placeholder="Textarea"
+                                placeholder="Please enter your message here..."
                             ></textarea>
                         </div>
                     </div>
 
                     <div class="field">
                         <div class="control">
-                            <label class="checkbox">
+                            <label class="checkbox make-black">
                                 <input type="checkbox" />
                                 I agree to the
-                                <a href="#">terms and conditions</a>
+                                <a href="#" class="make-blue"
+                                    >terms and conditions</a
+                                >
                             </label>
                         </div>
                     </div>
@@ -58,7 +53,7 @@
                             <button class="button is-primary">Submit</button>
                         </div>
                         <div class="control">
-                            <button class="button is-link is-light">
+                            <button class="button is-primary is-light">
                                 Cancel
                             </button>
                         </div>
@@ -80,6 +75,7 @@
 .container {
     border: 15px solid $sixth;
     min-height: 100%;
+    color: $sixth;
     z-index: 3;
 }
 .inner-border {
@@ -94,6 +90,12 @@
 }
 .form-cont {
     width: 80%;
+}
+.make-blue {
+    color: $sixth;
+}
+.make-black {
+    color: black;
 }
 h1 {
     font-size: 40px;

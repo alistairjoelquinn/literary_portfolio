@@ -2,7 +2,7 @@
     <div class="border-box">
         <div class="nav-container">
             <nuxt-link to="/">
-                <div class="logo" @click="homeClick">😼</div>
+                <div class="logo" @click="homeClick">Logo</div>
             </nuxt-link>
             <div class="nav-items-container">
                 <div class="spacer-top"></div>
@@ -62,9 +62,12 @@ export default {
 }
 .logo {
     width: 100%;
-    font-size: 140px;
+    /* font-size: 140px; */
+    padding-top: 60px;
+    font-size: 60px;
     text-align: center;
     background-color: transparent;
+    color: white;
 }
 .nav-items-container {
     height: 70%;
